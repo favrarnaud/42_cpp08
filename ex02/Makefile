@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME			= cont
+NAME			= mutant
 INCLUDE			= ./include
 SRC_DIR			= src/
 OBJ_DIR			= obj/
@@ -53,7 +53,7 @@ fclean:		clean
 re:			fclean all
 
 run: re
-			./template
+			./$(NAME)
 
 leaks: re
 			leaks --atExit -- ./$(NAME)
